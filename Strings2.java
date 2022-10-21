@@ -1,8 +1,8 @@
-/*Input a string from the user. Create a new string called ‘result’ in 
+/* Input a string from the user. Create a new string called ‘result’ in 
 which you will replace the letter ‘e’ in the original string with letter ‘i’. */
 
 import java.util.*;
-public class String2 {
+public class Strings2 {
     public static void main(String args[]){
 
         Scanner sc=new Scanner(System.in);
