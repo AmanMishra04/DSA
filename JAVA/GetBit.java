@@ -13,7 +13,8 @@ public class GetBit {
 
         if((bitMask & n)==0){
             System.out.println("Bit at pos is zero");
-        } else{
+        } 
+        else{
             System.out.println("Bit at pos is one");
         }
     }
