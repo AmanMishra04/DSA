@@ -11,7 +11,7 @@ public class naturalSum {
         sum+=i;
         printSum(i+1, n, sum);
     }
-
+    
     public static void main(String args[]){
         Scanner sc= new Scanner(System.in);
         System.out.print("Enter the limit: ");
