@@ -8,7 +8,7 @@ public class Move_Char_End {
             }
             System.out.println("New string is: "+newString);
             return;
-        }
+        } 
         char current=str.charAt(index);
         if(current== ch){
             count++;
