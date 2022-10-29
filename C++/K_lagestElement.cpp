@@ -20,5 +20,3 @@ int main()
 	int k = 3;
 	kLargest(arr, n, k);
 }
-
-// This code is contributed by Aditya Kumar (adityakumar129)
