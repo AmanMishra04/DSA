@@ -1,5 +1,5 @@
 import java.util.*;
-public class SringSubsequences {
+public class SringSubsequences1 {
     public static void printSequence(String str, int index, String newString){
 
         if(index==str.length()){
