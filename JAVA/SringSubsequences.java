@@ -4,7 +4,7 @@ public class SringSubsequences {
 
         if(index==str.length()){
             System.out.println(newString);
-            return;
+            return; 
         }
         char currChar=str.charAt(index);
 
