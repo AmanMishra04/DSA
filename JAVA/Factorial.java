@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.*; 
 public class Factorial {
     public static int calFact(int n){
         if(n==0 || n==1){
