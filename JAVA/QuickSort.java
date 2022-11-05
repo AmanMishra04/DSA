@@ -19,7 +19,7 @@ public class QuickSort {
         i++;
         int temp=arr[i];
         arr[i]=arr[high];
-        arr[pivot]=temp;
+        arr[high]=temp;
         return i;   //pivot index
     }
 
