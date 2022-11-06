@@ -13,7 +13,7 @@ public class ArrayList1{
         //Adding element at the end of the ArrayList using add function
         System.out.println("Enter the elements: ");
         for(int i=0; i<n; i++){
-            int element=sc.nextInt();
+            int element=sc.nextInt(); 
             list.add(element);
         }
 
