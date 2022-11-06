@@ -31,11 +31,7 @@ public class ArrayList2 {
         int element=sc.nextInt();
         list.add(index, element);
 
-        System.out.println("Elements in the ArrayList are: ");
-        for(int i=0; i<list.size(); i++){
-            System.out.print(list.get(i)+" ");
-        }
-        System.out.println();
+        System.out.println(list);
 
         //Updating the element using set funtion
         System.out.print("Enter the index to set: ");
@@ -44,10 +40,6 @@ public class ArrayList2 {
         int setele=sc.nextInt();
         list.set(setidx, setele);
 
-        System.out.println("Elements in the ArrayList are: ");
-        for(int i=0; i<list.size(); i++){
-            System.out.print(list.get(i)+" ");
-        }
-        System.out.println();
+        System.out.println(list);
     }
 }
