@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class ArrayList2 {
     public static void main(String args[]){
