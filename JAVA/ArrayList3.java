@@ -30,20 +30,12 @@ public class ArrayList3 {
         int remidx=sc.nextInt();
         list.remove(remidx);
 
-        System.out.println("Elements in the ArrayList are: ");
-        for(int i=0; i<list.size(); i++){
-            System.out.print(list.get(i)+" ");
-        }
-        System.out.println();
+        System.out.println(list);
 
         //Sorting the ArrayList
         Collections.sort(list);
-        System.out.println("Sorted Ayyaylist: ");
+        System.out.println("Sorted Arraylist: ");
 
-        System.out.println("Elements in the ArrayList are: ");
-        for(int i=0; i<list.size(); i++){
-            System.out.print(list.get(i)+" ");
-        }
-        System.out.println();
+        System.out.println(list);
     }
 }        
