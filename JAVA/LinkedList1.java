@@ -1,7 +1,5 @@
-import java.util.Currency;
-
 public class LinkedList1 {
-    Node head;
+    static Node head;
     
     class Node{
         int data;
@@ -15,29 +13,61 @@ public class LinkedList1 {
 
     //Insertion at the beginning
     public void insBeg(int data){
-        Node newNode=new Node(data);
+        Node fresh=new Node(data);
         if(head==null){
-            head= newNode;
+            head= fresh;
             return;
         }
 
-        newNode.next= head;
-        head= newNode;
+        fresh.next= head;
+        head= fresh;
     }
 
     //Insertion at the end
     public void insEnd(int data){
-        Node newNode= new Node(data);
+        Node fresh= new Node(data);
         if(head==null){
-            head=newNode;
+            head=fresh;
             return;
         }
 
-        Node currNode=head;
-        while(currNode.next!=null){
-            currNode= currNode.next;
+        Node temp=head;
+        while(temp.next!=null){
+            temp= temp.next;
         }
-        currNode.next=newNode;
+        temp.next=fresh;
+    }
+
+    //Deletion from the beginning
+    public static void delBeg(){
+        if(head==null){
+            System.out.println("No data in the list");
+        }
+        head=head.next;
+        
+        System.out.println("Deleted from beginning");
+    }
+
+    //Deletion from the end
+    public static void delEnd(){
+        if(head==null){
+            System.out.println("No data in the list");
+        }
+        if(head.next==null){
+            head=null;
+        }
+        Node temp=head;
+        Node temp1=head;
+
+        while(temp.next!=null){
+            temp=temp.next;
+        }
+        while(temp1.next!=temp){
+            temp1=temp1.next;
+        }
+        temp1.next=null;
+
+        System.out.println("Deleted from end");
     }
     
     //Printing the list
@@ -46,21 +76,27 @@ public class LinkedList1 {
             System.out.println("No data in the list");
         }
 
-        Node currNode=head;
-        while(currNode!=null){
-            System.out.print(currNode.data+" ");
-            currNode=currNode.next;
+        Node temp=head;
+        while(temp!=null){
+            System.out.print(temp.data+" ");
+            temp=temp.next;
         }
+        System.out.println();
     }
 
     public static void main(String args[]) {
         
         LinkedList1 list=new LinkedList1();
+        
         list.insBeg(10);
         list.insEnd(15);
         list.insBeg(5);
         list.insEnd(20);
+        list.traverse();
 
+        list.delBeg();
+        list.traverse();
+        list.delEnd();
         list.traverse();
     }
 }
