@@ -1,5 +1,7 @@
+import java.util.Currency;
+
 public class LinkedList1 {
-    static Node head;
+    Node head;
     
     class Node{
         int data;
@@ -21,23 +23,24 @@ public class LinkedList1 {
 
         newNode.next= head;
         head= newNode;
+    }
 
-    }    
-    public static void insEnd(int data){
-        Node newNode = new Node(data);
+    //Insertion at the end
+    public void insEnd(int data){
+        Node newNode= new Node(data);
         if(head==null){
-            head= newNode;
+            head=newNode;
             return;
         }
 
-        Node lastNode=head;
-        while(lastNode.next!=null){
-            lastNode=lastNode.next;
+        Node currNode=head;
+        while(currNode.next!=null){
+            currNode= currNode.next;
         }
-        lastNode.next=newNode;
-
+        currNode.next=newNode;
     }
-
+    
+    //Printing the list
     public void traverse(){
         if(head==null){
             System.out.println("No data in the list");
@@ -48,17 +51,16 @@ public class LinkedList1 {
             System.out.print(currNode.data+" ");
             currNode=currNode.next;
         }
-
-        System.out.println("NULL");
     }
 
     public static void main(String args[]) {
         
         LinkedList1 list=new LinkedList1();
-        list.insBeg(5);
         list.insBeg(10);
-        list.insBeg(15);
- 
+        list.insEnd(15);
+        list.insBeg(5);
+        list.insEnd(20);
+
         list.traverse();
     }
 }
