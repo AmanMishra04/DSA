@@ -1,6 +1,11 @@
 public class LinkedList1 {
     static Node head;
-    
+    private static int size;
+
+    LinkedList1(){
+        this.size=0;
+    }
+
     class Node{
         int data;
         Node next;
@@ -8,8 +13,10 @@ public class LinkedList1 {
         Node(int data){
             this.data= data;
             this.next=null;
+            size++;
         }
     }
+
 
     //Insertion at the beginning
     public void insBeg(int data){
@@ -22,6 +29,7 @@ public class LinkedList1 {
         fresh.next= head;
         head= fresh;
     }
+
 
     //Insertion at the end
     public void insEnd(int data){
@@ -38,24 +46,30 @@ public class LinkedList1 {
         temp.next=fresh;
     }
 
+
     //Deletion from the beginning
     public static void delBeg(){
         if(head==null){
             System.out.println("No data in the list");
         }
+
         head=head.next;
-        
+        size--;
         System.out.println("Deleted from beginning");
     }
+
 
     //Deletion from the end
     public static void delEnd(){
         if(head==null){
             System.out.println("No data in the list");
         }
+
+        size--;
         if(head.next==null){
             head=null;
         }
+
         Node temp=head;
         Node temp1=head;
 
@@ -70,6 +84,7 @@ public class LinkedList1 {
         System.out.println("Deleted from end");
     }
     
+
     //Printing the list
     public void traverse(){
         if(head==null){
@@ -84,6 +99,13 @@ public class LinkedList1 {
         System.out.println();
     }
 
+
+    //Size of the Linked List
+    public int getSize(){
+        return size;
+    }
+
+    
     public static void main(String args[]) {
         
         LinkedList1 list=new LinkedList1();
@@ -98,5 +120,7 @@ public class LinkedList1 {
         list.traverse();
         list.delEnd();
         list.traverse();
+
+        System.out.println("Size of the list is: "+list.getSize());
     }
 }
