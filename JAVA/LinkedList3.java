@@ -40,6 +40,21 @@ public class LinkedList3 {
         temp.next=fresh;
     }
 
+
+    //Printing the list
+    public void traverse(){
+        if(head==null){
+            System.out.println("No data in the list");
+        }
+
+        Node temp=head;
+        while(temp!=null){
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+        System.out.println();
+    }
+
     //Reverse the Linked List
     public void reverse(){
         if(head==null || head.next==null){
@@ -69,9 +84,12 @@ public class LinkedList3 {
         list.insEnd(10);
         list.insEnd(15);
         list.insEnd(20);
-        System.out.println(list);
+
+        System.out.println("Original LinkedcList: ");
+        list.traverse();
 
         list. reverse();
-        System.out.println(list);
+        System.out.println("Reversed LinkedcList: ");
+        list.traverse();
     }
 }
