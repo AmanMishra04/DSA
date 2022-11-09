@@ -85,11 +85,11 @@ public class LinkedList3 {
         list.insEnd(15);
         list.insEnd(20);
 
-        System.out.println("Original LinkedcList: ");
+        System.out.println("Original LinkedList: ");
         list.traverse();
 
         list. reverse();
-        System.out.println("Reversed LinkedcList: ");
+        System.out.println("Reversed LinkedList: ");
         list.traverse();
     }
 }
