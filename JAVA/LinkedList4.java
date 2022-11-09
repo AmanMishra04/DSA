@@ -1,5 +1,5 @@
 public class LinkedList4 {
-    static Node head;
+    Node head;
 
     class Node{
         int data;
@@ -56,7 +56,7 @@ public class LinkedList4 {
     }
 
     //Reverse the Linked List
-    public Node reverseRecursive(Node headNode){
+    public Node reverseRecursive(Node head){
         
         if(head==null || head.next==null){
             return head;
@@ -81,7 +81,10 @@ public class LinkedList4 {
         System.out.println("Original LinkedList: ");
         list.traverse();
 
-        System.out.println("Reversed LinkedList: ");
         list.head= list.reverseRecursive(list.head);
+        
+        System.out.println("Reversed LinkedList: ");
+        list.traverse();
+        
     }
 }
