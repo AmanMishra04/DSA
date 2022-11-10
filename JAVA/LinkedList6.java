@@ -96,7 +96,7 @@ public class LinkedList6 {
             System.out.print("Enter a choice: ");
             int choice= sc.nextInt();
 
-            switch(choice){
+            switch(choice){ 
                 case 1:
                 System.out.print("Enter the data: ");
                 int data= sc.nextInt();
