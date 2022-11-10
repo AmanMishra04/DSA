@@ -12,32 +12,36 @@ public class LinkedList6 {
         }
     }
 
-        //Inertion from beginning
-        public void insBeg(int data){
-            Node fresh = new Node(data);
-            
-            if(head==null){
-                head=fresh;                
-            }
-
-            fresh.next=head;
-            head=fresh;
-        }
-
-        //Insertion from end
-        public void insEnd(int data){
-            Node fresh= new Node(data);
-            if(head==null){
-                head=fresh;
-                return;
-            }
     
-            Node temp=head;
-            while(temp.next!=null){
-                temp= temp.next;
-            }
-            temp.next=fresh;
+    //Inertion from beginning
+    public void insBeg(int data){
+        Node fresh = new Node(data);
+            
+        if(head==null){
+            head=fresh;
+            return;                
         }
+
+        fresh.next=head;
+        head=fresh;
+    }
+
+
+    //Insertion from end
+    public void insEnd(int data){
+        Node fresh= new Node(data);
+        if(head==null){
+            head=fresh;                return;
+        }
+          
+        Node temp=head;
+        
+        while(temp.next!=null){
+        temp= temp.next;
+        }
+        temp.next=fresh;
+    }
+
 
         //Deletion from beginning
         public void delBeg(){
@@ -52,6 +56,7 @@ public class LinkedList6 {
             head=head.next;
             System.out.println("Deleted from beginning");
         }
+
 
         //Deletion from end
         public void delEnd(){
@@ -77,11 +82,12 @@ public class LinkedList6 {
             System.out.println("Deleted from end");
         }
 
+
         //Printing the List
         public void traverse(){
             Node temp=head;
             while(temp!=null){
-                System.out.println(temp.data);
+                System.out.print(temp.data+" ");
                 temp=temp.next;
             }
         }
@@ -91,6 +97,12 @@ public class LinkedList6 {
         Scanner sc=new Scanner(System.in);
 
         LinkedList6 list= new LinkedList6();
+
+        System.out.println("1. Insertion from Beginning");
+        System.out.println("2. Insertion from End");
+        System.out.println("3. Deletion from Beginning");
+        System.out.println("4. Deletion from End");
+        System.out.println("5. Traverse");
 
         while(true){
             System.out.print("Enter a choice: ");
@@ -119,6 +131,7 @@ public class LinkedList6 {
 
                 case 5:
                 list.traverse();
+                break;
 
                 default:
                 System.exit(0);
