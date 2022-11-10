@@ -26,15 +26,15 @@ public class LinkedList6 {
 
         //Insertion from end
         public void insEnd(int data){
-            Node fresh = new Node(data);
-
+            Node fresh= new Node(data);
             if(head==null){
                 head=fresh;
+                return;
             }
-
+    
             Node temp=head;
             while(temp.next!=null){
-                temp=temp.next;
+                temp= temp.next;
             }
             temp.next=fresh;
         }
@@ -107,12 +107,15 @@ public class LinkedList6 {
                 System.out.print("Enter the data: ");
                 data= sc.nextInt();
                 list.insEnd(data);
+                break;
 
                 case 3:
                 list.delBeg();
+                break;
 
                 case 4:
                 list.delEnd();
+                break;
 
                 case 5:
                 list.traverse();
