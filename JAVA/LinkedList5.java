@@ -56,6 +56,9 @@ public class LinkedList5 {
             currNode=currNode.next;
             size++;
         }
+        if(size==n){
+            return head.next;
+        }
 
         //Finding prev index of the current Node
         int prevIndex=size-n;
