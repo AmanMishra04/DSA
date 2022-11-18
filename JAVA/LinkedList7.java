@@ -43,7 +43,8 @@ public class LinkedList7 {
 
                 default:
                 System.exit(0);
-            }  
+            }
         }
+        sc.close();
     }
 }
