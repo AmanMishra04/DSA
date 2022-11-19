@@ -1,3 +1,5 @@
+/* Delete Nth node from the end */
+
 public class LinkedList5 {
     static Node head;
 
