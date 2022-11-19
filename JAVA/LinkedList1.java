@@ -1,3 +1,5 @@
+/* Linked List in java -> insBeg, insEnd, delBeg, delEnd, Traverse, getSize */
+
 public class LinkedList1 {
     static Node head;
     private static int size;
