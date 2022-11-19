@@ -1,5 +1,6 @@
-import java.util.*;
+/* Implementing Linked_List using JAVA_Collections */
 
+import java.util.*;
 public class LinkedList2 {
     public static void main(String args[]){
 
