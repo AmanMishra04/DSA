@@ -1,3 +1,5 @@
+/* Menu driven implementation of Linked List  */
+
 import java.util.*;
 public class LinkedList6 {
     static Node head;
