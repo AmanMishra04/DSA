@@ -43,7 +43,7 @@ public class LinkedList7 {
         System.out.println();
     }
 
-    public Node reverse(Node head){
+    public Node reverse(Node head){ṇ
         Node prev=null;
         Node curr= head;
 
@@ -57,14 +57,21 @@ public class LinkedList7 {
     }
 
     public Node findMiddle(Node head){
-             
+        Node hare=head;
+        Node turtle=head;
+        
+        while(hare.next!=null || hare.next.next!=null){
+            hare=hare.next.next;
+            turtle=turtle.next;        
+        }
+        return turtle;
     }
 
     public boolean isPalindrome(Node head){
         if(head== null || head.next==null){
             return true;
         }
-        Node firstHalfStart= findMiddle(head); //end of first half
+        Node middle= findMiddle(head); //end of first half
         Node secondHalStart= reverse(middle.next);
         
         Node firstHalfStart= head;
