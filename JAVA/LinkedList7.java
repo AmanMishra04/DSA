@@ -1,8 +1,7 @@
-/* Checking is a LinkedList is Pallindrome */
+/* Checking if a LinkedList is Pallindrome */
 
 import java.util.*;
 
-import javax.xml.stream.events.NotationDeclaration;
 public class LinkedList7 {
     static Node head;    
 
@@ -43,7 +42,7 @@ public class LinkedList7 {
         System.out.println();
     }
 
-    public Node reverse(Node head){ṇ
+    public Node reverse(Node head){
         Node prev=null;
         Node curr= head;
 
@@ -72,16 +71,16 @@ public class LinkedList7 {
             return true;
         }
         Node middle= findMiddle(head); //end of first half
-        Node secondHalStart= reverse(middle.next);
+        Node secondHalfStart= reverse(middle.next);
         
         Node firstHalfStart= head;
         while(secondHalfStart!= null){
-            if(firstHalfStart.data!= secondHalStart.data){
+            if(firstHalfStart.data!= secondHalfStart.data){
             return false;
             }
 
             firstHalfStart=firstHalfStart.next;
-            secondHalStart=secondHalStart.next;
+            secondHalfStart=secondHalfStart.next;
         }
         return true;
     }
@@ -103,5 +102,8 @@ public class LinkedList7 {
             n--;
         }
         list.traverse();
+        if(list.isPalindrome(head)==true){
+            System.out.println("LinkedList is pallindrome");
+        }
     }
 }
