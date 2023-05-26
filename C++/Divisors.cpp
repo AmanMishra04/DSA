@@ -18,7 +18,6 @@ int main(){
             }
         }    
     }
-
     sort(ls.begin(), ls.end());
     for(auto it : ls){
         cout <<it <<" ";
