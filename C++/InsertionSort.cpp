@@ -21,6 +21,7 @@ int main(){
             arr[j+1]=arr[j];
             j--;
         }
+        
         //placement of current element
         arr[j+1]=current;
     }
