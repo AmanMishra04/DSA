@@ -18,6 +18,5 @@ public class Pattern1 {
         }
 
         sc.close();
-
     }    
 }
