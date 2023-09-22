@@ -8,7 +8,6 @@ public class Pattern2 {
         int n = sc.nextInt();
         System.out.print("Enter the number of columns: ");
         int m = sc.nextInt();
-
         
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= m; j++) {
@@ -21,6 +20,5 @@ public class Pattern2 {
         }
 
         sc.close();
-
     }    
 }
